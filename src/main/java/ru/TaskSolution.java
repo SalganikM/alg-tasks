@@ -2,6 +2,8 @@ package ru;
 
 import lombok.extern.java.Log;
 
+import java.lang.reflect.Array;
+
 @Log
 public abstract class TaskSolution<ResultType, ArgType> {
     public abstract ResultType solution(ArgType arg);
@@ -17,10 +19,29 @@ public abstract class TaskSolution<ResultType, ArgType> {
     public void test() {
         ResultType expectedResult = getExpectedResult();
         ResultType obtainedResult = solution(getTestData());
-        if (!expectedResult.equals(obtainedResult)) {
-            String message = String.format("Expected result: %s, obtained result: %s", expectedResult, obtainedResult);
-            throw new IncorrectAnswerException(message);
+        if (expectedResult.getClass().isArray()) {
+            if (!arraysEquals(expectedResult, obtainedResult)) {
+                throwIncorrectAnswerException(expectedResult, obtainedResult);
+            }
+            return;
         }
+        if (!expectedResult.equals(obtainedResult)) {
+            throwIncorrectAnswerException(expectedResult, obtainedResult);
+        }
+    }
+
+    private boolean arraysEquals(ResultType expectedResult, ResultType obtainedResult) {
+        for (int i = 0; i < Array.getLength(expectedResult); i++) {
+            if (!Array.get(expectedResult, i).equals(Array.get(expectedResult, i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void throwIncorrectAnswerException(ResultType expectedResult, ResultType obtainedResult) {
+        String message = String.format("Expected result: %s, obtained result: %s", expectedResult.toString(), obtainedResult.toString());
+        throw new IncorrectAnswerException(message);
     }
 
     public void simpleSpeedTest() {
