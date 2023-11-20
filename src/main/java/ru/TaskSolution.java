@@ -32,7 +32,7 @@ public abstract class TaskSolution<ResultType, ArgType> {
 
     private boolean arraysEquals(ResultType expectedResult, ResultType obtainedResult) {
         for (int i = 0; i < Array.getLength(expectedResult); i++) {
-            if (!Array.get(expectedResult, i).equals(Array.get(expectedResult, i))) {
+            if (!Array.get(expectedResult, i).equals(Array.get(obtainedResult, i))) {
                 return false;
             }
         }
