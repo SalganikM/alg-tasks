@@ -71,7 +71,7 @@ public class LongestPalindromicSubstring extends LeetcodeTaskSolution<String, St
         return MEDIUM;
     }
 
-    public String getDescription() {
+    public String getUrl() {
         return "https://leetcode.com/problems/longest-palindromic-substring/";
     }
 }

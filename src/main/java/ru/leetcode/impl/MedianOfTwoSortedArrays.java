@@ -65,7 +65,7 @@ public class MedianOfTwoSortedArrays extends LeetcodeTaskSolution<Double, Pair<i
         return HARD;
     }
 
-    public String getDescription() {
+    public String getUrl() {
         return "https://leetcode.com/problems/median-of-two-sorted-arrays/";
     }
 }

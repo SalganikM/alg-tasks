@@ -12,7 +12,7 @@ public abstract class TaskSolution<ResultType, ArgType> {
 
     public abstract ResultType getExpectedResult();
 
-    public String getDescription() {
+    public String getUrl() {
         return "There are no description for this task";
     }
 

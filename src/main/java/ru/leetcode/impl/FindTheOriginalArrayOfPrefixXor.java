@@ -47,7 +47,7 @@ public class FindTheOriginalArrayOfPrefixXor extends LeetcodeTaskSolution<int[],
         return MEDIUM;
     }
 
-    public String getDescription() {
+    public String getUrl() {
         return "https://leetcode.com/problems/find-the-original-array-of-prefix-xor/";
     }
 }

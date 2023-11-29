@@ -38,7 +38,7 @@ public class PartitioningIntoMinimumNumberOfDeciBinaryNumbers extends LeetcodeTa
         return MEDIUM;
     }
 
-    public String getDescription() {
+    public String getUrl() {
         return "https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/";
     }
 }
