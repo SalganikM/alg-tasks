@@ -3,11 +3,7 @@ package ru.leetcode.impl;
 import ru.leetcode.LeetcodeTaskSolution;
 import ru.leetcode.TaskDifficulty;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import static ru.leetcode.TaskDifficulty.HARD;
-import static ru.leetcode.TaskDifficulty.MEDIUM;
 
 public class LongestValidParentheses extends LeetcodeTaskSolution<Integer, String> {
     public static void main(String[] args) {

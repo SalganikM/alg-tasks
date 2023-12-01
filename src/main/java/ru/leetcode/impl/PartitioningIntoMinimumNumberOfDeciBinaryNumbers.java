@@ -3,9 +3,6 @@ package ru.leetcode.impl;
 import ru.leetcode.LeetcodeTaskSolution;
 import ru.leetcode.TaskDifficulty;
 
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicReference;
-
 import static ru.leetcode.TaskDifficulty.MEDIUM;
 
 public class PartitioningIntoMinimumNumberOfDeciBinaryNumbers extends LeetcodeTaskSolution<Integer, String> {
